@@ -7,16 +7,19 @@ const express = require('express')
 
 const server = express();
 
-// const PORT  process.env.PORT;
+const PORT = process.env.PORT;
 
 //local host 3001
-const PORT = 3001;
+// const PORT = 3001;
 
 server.listen(PORT, () => {
     console.log(`listing on PORT ${PORT}`)
 })
 
 ////////////////////////////////////////////////
+
+// https://class07-local-server.herokuapp.com/getWeather?cityName=amman
+
 
 server.get('/getWeather', (req, res) => {
 
