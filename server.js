@@ -1,4 +1,8 @@
 'use strict';
+require('dotenv').config();
+
+const cors = require('cors');
+
 const data = require('./data/weather.json')
 
 const { request, response } = require('express');
@@ -8,6 +12,8 @@ const express = require('express')
 const server = express();
 
 const PORT = process.env.PORT;
+
+server.use(cors());
 
 //local host 3001
 // const PORT = 3001;
